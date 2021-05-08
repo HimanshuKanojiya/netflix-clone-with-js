@@ -1,0 +1,49 @@
+#headers{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 14px;
+
+}
+#headers strong{
+    display: none;
+}
+
+#Mainsection, #Mainsectiontoprated, #Mainsectionlatest, #Mainsectiontvseries, #Mainsectionactionmovies, 
+#Mainsectionsciencefictionmovies, #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies
+{
+    object-fit: contain;
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 30px;
+    overflow-y: hidden;
+}
+#Mainsection::-webkit-scrollbar, #Mainsectiontoprated::-webkit-scrollbar, #Mainsectionlatest::-webkit-scrollbar,
+#Mainsectiontvseries::-webkit-scrollbar, #Mainsectionactionmovies::-webkit-scrollbar,
+#Mainsectionsciencefictionmovies::-webkit-scrollbar,#Mainsectionwarmovies::-webkit-scrollbar,
+#Mainsectionthrillermovies::-webkit-scrollbar, #Mainsectionhorrormovies::-webkit-scrollbar
+{
+    display: none;
+}
+
+#Mainsection img, #Mainsectiontoprated img, #Mainsectionlatest img, #Mainsectiontvseries img, #Mainsectionactionmovies img,
+#Mainsectionsciencefictionmovies img, #Mainsectionwarmovies img, #Mainsectionthrillermovies img,
+#Mainsectionhorrormovies img
+{
+    width: 230px;
+    height: 130px;
+    padding-right: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 250ms ease;
+}
+#Mainsection img:hover, #Mainsectiontoprated img:hover, #Mainsectionlatest img:hover, #Mainsectiontvseries img:hover,
+#Mainsectionactionmovies img:hover, #Mainsectionsciencefictionmovies img:hover,
+#Mainsectionwarmovies img:hover, #Mainsectionthrillermovies img:hover, #Mainsectionhorrormovies img:hover
+{
+    transform: scale(1.05);
+}

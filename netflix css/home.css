@@ -1,0 +1,21 @@
+body{
+    background: #141414;
+    color: #fff;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    height: max-content;
+    width: fit-content;
+    box-sizing: border-box;
+    display: initial;
+}
+
+@media screen and (max-width:950px) {
+    #imageslogo{
+        width:25%;
+    }
+    #featuredshows{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 14px 14px 14px 14px;
+    }
+}

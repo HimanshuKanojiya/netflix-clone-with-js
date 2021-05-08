@@ -1,0 +1,77 @@
+#headersection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position:sticky;
+    top: 0;
+    background-color: #141414;
+    z-index: 5;
+}
+
+#imageslogo{
+    margin-left: 25px;
+    width: 7%;
+}
+#navigation{
+    margin-left: 25px;
+    width: 60%;
+}
+#otherheadersection{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin-left: auto;
+}
+#searchbar span{
+    display: inline;
+    vertical-align: middle;
+
+}
+#navigation nav li, #otherheadersection nav li{
+    display: inline;
+    padding-right: 20px;
+    transition: hover 10s ease-in;
+}
+#navigation nav li:hover, #otherheadersection nav li:hover{
+    opacity: 60%;
+    cursor:pointer;
+}
+#searchwithimage{
+    color: white;
+    display: none;
+    background-color: #141414;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    height: 70%;
+}
+#otherheadersection img{
+    width: 4%;
+    filter: brightness(0) invert(1);
+    transition: all 45ms ease;
+}
+
+#othersection img:hover{
+    display: none;
+}
+#gifticon, #bellicon{
+    display: inline;
+    vertical-align: middle;
+}
+
+#gifticon img, #bellicon img{
+    width: 25px;
+}
+
+#profile-icon{
+    display: inline;
+    vertical-align: middle;
+    width: auto;
+}
+#profile-icon img{
+    width: 5%;
+
+}

@@ -1,0 +1,49 @@
+#showcasevideo{
+    align-items: center;
+    background-color: black;
+    border-top-left-radius: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+    padding: 0px 14px 14px 14px;
+    width: min-content;
+    z-index: 5;
+}
+#closethis{
+    color: gray;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-top: 15px;
+    transition: all 45ms ease-in;
+}
+#closethis:hover{
+    color: white;
+    transform: scale(1.2);
+
+}
+#title-section strong{
+    font-size: 24px;
+    word-spacing: 2px;
+
+}
+#ratebar{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #46d369;
+    font-weight: 600;
+}
+#othermoviedetails{
+    color: white;
+    font-size: 20;
+    margin-left: 15px;
+}
+#title-section p{
+    font-size: 16px;
+    line-height: 1.5em;
+
+}
