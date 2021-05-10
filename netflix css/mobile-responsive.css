@@ -100,6 +100,19 @@
 
 
 /* Footer Section CSS */
+@media screen and (max-width:1250px) {
+    #footersocialmediaicons img{
+        width: 5%;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+    #footersocialmediaicons img{
+        width: 5%;
+    }
+    
+}
+
 @media screen and (max-width:700px) {
     #footersection{
         margin-left: 0;
@@ -135,7 +148,7 @@
         margin-left: 0;
     }
     #footersocialmediaicons img{
-        width: 16%;
+        width: 9%;
     }
 
 

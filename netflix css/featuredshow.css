@@ -26,6 +26,7 @@
     position: absolute;
     width: 80%;
     margin-top: 400px;
+    z-index: 1;
 }
 
 #abovetext p{
@@ -98,6 +99,12 @@
     width: 30px;
     height: 30px;
     margin-right: 10px;
+}
+
+#featureimage iframe{
+    position: relative;
+    width: inherit;
+    height: inherit;
 }
 
 /* #buttonclass button{

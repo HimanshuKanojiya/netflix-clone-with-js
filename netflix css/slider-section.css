@@ -5,11 +5,27 @@
     margin-bottom: 10px;
     display: block;
     line-height: 14px;
-
+    user-select: none;
+    cursor: pointer;
 }
-#headers strong{
+#headers span{
     display: none;
 }
+
+
+#fulltext{
+    display: none;
+    font-size: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 
 #Mainsection, #Mainsectiontoprated, #Mainsectionlatest, #Mainsectiontvseries, #Mainsectionactionmovies, 
 #Mainsectionsciencefictionmovies, #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies
@@ -19,6 +35,7 @@
     overflow-x: scroll;
     margin-left: 30px;
     overflow-y: hidden;
+    filter: brightness(1.2);
 }
 #Mainsection::-webkit-scrollbar, #Mainsectiontoprated::-webkit-scrollbar, #Mainsectionlatest::-webkit-scrollbar,
 #Mainsectiontvseries::-webkit-scrollbar, #Mainsectionactionmovies::-webkit-scrollbar,
@@ -32,6 +49,7 @@
 #Mainsectionsciencefictionmovies img, #Mainsectionwarmovies img, #Mainsectionthrillermovies img,
 #Mainsectionhorrormovies img
 {
+    cursor: pointer;
     width: 230px;
     height: 130px;
     padding-right: 15px;

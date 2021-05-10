@@ -39,6 +39,10 @@
     opacity: 60%;
     cursor:pointer;
 }
+#navigation a{
+    text-decoration: none;
+    color: white;
+}
 #searchwithimage{
     color: white;
     display: none;
@@ -50,7 +54,6 @@
 }
 #otherheadersection img{
     width: 4%;
-    filter: brightness(0) invert(1);
     transition: all 45ms ease;
 }
 
@@ -63,6 +66,7 @@
 }
 
 #gifticon img, #bellicon img{
+    filter: brightness(0) invert(1);
     width: 25px;
 }
 
@@ -72,6 +76,7 @@
     width: auto;
 }
 #profile-icon img{
-    width: 5%;
+    border-radius: 4px;
+    width: 25px;
 
 }

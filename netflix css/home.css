@@ -6,12 +6,12 @@
 body{
     background: #141414;
     color: #fff;
-    /* font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif; */
     font-family: myCustomNetflixFont;
     height: max-content;
     width: fit-content;
     box-sizing: border-box;
     display: initial;
+    user-select: none;
 }
 
 @media screen and (max-width:950px) {
