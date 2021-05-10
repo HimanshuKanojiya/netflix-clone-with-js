@@ -35,4 +35,30 @@ function loadfeaturesection(portion){
     let section = document.getElementById(portion);
     section.innerHTML = contentretrive();
 }
+
+function loadmovie(){
+    htmlPortion = `
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/NYH2sLid0Zc?modestbranding=1&controls=0&rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `
+    let featureimage = document.getElementById("featureimage");
+    featureimage.innerHTML = htmlPortion;
+}
+function playandpause(){
+    let play = document.getElementById("playbutton");
+    play.onclick = function(){
+        if(document.getElementById("featureimage").childElementCount === 0){
+            loadmovie();
+            document.getElementById("playbuttontext").innerHTML = "Pause";
+            document.getElementById("playbuttonlogo").firstElementChild.src = "./netflix images/pause-button.png";
+        }
+        else{
+            document.getElementById("playbuttonlogo").firstElementChild.src = "./netflix images/play-icon.png";
+            document.getElementById("featureimage").innerHTML = "";
+            document.getElementById("playbuttontext").innerHTML = "Play";
+            
+        }
+    }
+}
 loadfeaturesection("featuredshows");
+playandpause();
+

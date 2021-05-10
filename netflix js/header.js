@@ -1,16 +1,16 @@
 function headercontentretrieve(){
     return `
     <div id="imageslogo">
-            <img src="./netflix images/netflix-logo.png" alt="Netflix Logo">
+            <a href = "./index.html"><img src="./netflix images/netflix-logo.png" alt="Netflix Logo"></a>
         </div>
         <div id="navigation">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>TV Shows</li>
-                    <li>Movies</li>
-                    <li>New & Popular</li>
-                    <li>My List</li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./browse.html?type=Upcoming Movies">Upcoming Movies</a></li>
+                    <li><a href="./browse.html?type=All Movies">Movies</a></li>
+                    <li><a href="./browse.html?type=Popular Movies">New & Popular</a></li>
+                    <li><a href="./browse.html?type=My List">My List</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,7 +23,7 @@ function headercontentretrieve(){
                 <li id="bellicon"><img src="./netflix images/netflix-bell-icon.png" alt="Bell Icon"></li>
                 <li>
                 <div id="profile-icon">
-                <img src="./netflix images/netflix-profile-icon.png" alt="Profile Icon">
+                <img src="./netflix images/profile-blue-icon.png" alt="Profile Icon">
                 </div>
                 </li>
             </ul>

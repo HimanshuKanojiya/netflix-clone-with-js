@@ -46,6 +46,6 @@ class Popularonnetflix{
         this.additionalpararmatend = value;
     }
     set_popular_movie(){
-        this.popularimageobjects = this.contentforpopular[0];
+        this.popularimageobjects = this.contentforpopular[Math.floor(Math.random() * this.contentforpopular.length)];
     }
 }
