@@ -1,5 +1,12 @@
 /* Header Section CSS */
 
+@media screen and (max-width:500px){
+    #sectionimages img{
+        width:200px;
+    }
+}
+
+
 @media screen and (max-width:860px) {
     #navigation{
         display: none;
