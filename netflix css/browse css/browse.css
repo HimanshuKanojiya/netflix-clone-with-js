@@ -1,0 +1,53 @@
+#headers{
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 2%;
+}
+
+#maincontentsection{
+    margin-left: 48px;
+    margin-top: 25px;
+}
+
+#sectionimages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    filter: brightness(1.2);
+}
+
+#sectionimages img{
+    border-radius: 15px;
+    cursor: pointer;
+    height: 140px;
+    margin-right: 5px;
+    margin-bottom: 35px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    width: 210px;
+    transition: all 200ms ease-in;
+}
+
+#sectionimages img:hover{
+    transform: scale(1.2);
+
+}
+
+#pagecounter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-top: 30px;
+}
+
+#contain-info{
+    display: none;
+}
