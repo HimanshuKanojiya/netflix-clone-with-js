@@ -78,7 +78,7 @@ let API_Mapping = {
         "Additional_Params":null,
         "Last_Page":null,
     },
-    "Kids Movies":{
+    "Cartoon Movies":{
         "API":"https://api.themoviedb.org/3/discover/movie",
         "Current_Page":1,
         "Additional_Params":"&with_genres=16",
@@ -110,7 +110,7 @@ function loadContent(){
     else{
         let urlparam = decodeURIComponent(window.location.search.split("=")[0].split("?")[1].split("_").join(" "));
         query = urlparam;
-        API_Mapping[query].Additional_Params = `&language=en-US&include_adult=true&query=${decodeURIComponent(window.location.search.split("=")[1])}`;
+        API_Mapping[query].Additional_Params = `&language=en-US&include_adult=false&query=${decodeURIComponent(window.location.search.split("=")[1])}`;
     }
     
     

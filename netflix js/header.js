@@ -18,7 +18,7 @@ function headercontentretrieve(){
             <nav>
             <ul>
                 <li id="searchbar"><span><img id="imageofsearch" src="./netflix images/search-icon.png" alt="search-icon"><input id="searchwithimage" type="text"></span></li>
-                <li id="kid"><a href="./browse.html?type=Kids Movies">Children</a></li>
+                <li id="kid"><a href="./browse.html?type=Cartoon Movies">Cartoon Movies</a></li>
                 <li id="gifticon"><img src="./netflix images/netflix gift box.png" alt="Gift Box"></li>
                 <li id="bellicon"><img src="./netflix images/netflix-bell-icon.png" alt="Bell Icon"></li>
                 <li>
@@ -43,11 +43,19 @@ Search Bar Expander
 let searchclickimage = document.getElementById("imageofsearch");
 let searchbarinput = document.getElementById("searchwithimage");
 searchclickimage.onclick = function(){
-    if(searchbarinput.style.getPropertyValue("display") === ""){
+    if(searchbarinput.style.getPropertyValue("display") === "" || searchbarinput.style.getPropertyValue("display") === "none"){
         searchbarinput.style.display = "inline";
         searchclickimage.style.display = "none";
         }
 
+}
+searchbarinput.onmouseout = function(){
+    alert("Intss")
+    if(searchclickimage.style.getPropertyValue("display") === "none"){
+        alert("Int");
+        searchbarinput.style.display = "none";
+        searchclickimage.style.display = "inline";
+    }
 }
 
 
