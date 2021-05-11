@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     vertical-align: middle;
+    height: 8vh;
     position:sticky;
     top: 0;
     background-color: #141414;
@@ -13,7 +14,7 @@
 
 #imageslogo{
     margin-left: 25px;
-    width: 7%;
+    width: 10%;
 }
 #navigation{
     margin-left: 25px;
@@ -24,6 +25,10 @@
     flex-direction: row;
     width: 40%;
     margin-left: auto;
+}
+#otherheadersection a{
+    color: white;
+    text-decoration: none;
 }
 #searchbar span{
     display: inline;

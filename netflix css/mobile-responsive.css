@@ -1,18 +1,11 @@
 /* Header Section CSS */
 
-@media screen and (max-width:500px){
-    #sectionimages img{
-        width:200px;
-    }
-}
-
-
 @media screen and (max-width:860px) {
     #navigation{
         display: none;
     }
     #imageslogo{
-        width: auto;
+        width: 50%;
     }
     #imageslogo img{
         width:100px;
@@ -21,16 +14,23 @@
         display: flex;
         flex-direction: row;
         justify-content: end;
-        width: 300px;
-        margin-left: 40%;
+        width: 100%;
+        margin-left: auto;
         
     }
-    #otherheadersection #searchbar{
+    #imageofsearch{
         display: none;
     } 
     #otherheadersection #kid{
-        display: none;
+        display: inline;
     } 
+    #gifticon, #bellicon{
+        display: none !important;
+    } 
+    #searchwithimage{
+        width: 35%;
+        display: inline;
+    }
 }
 
 /* End of Header Section */
@@ -155,7 +155,7 @@
         margin-left: 0;
     }
     #footersocialmediaicons img{
-        width: 9%;
+        width: 15%;
     }
 
 
