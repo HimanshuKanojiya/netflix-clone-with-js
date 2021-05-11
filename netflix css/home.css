@@ -22,6 +22,5 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 14px 14px 14px 14px;
     }
 }

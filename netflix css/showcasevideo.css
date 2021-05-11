@@ -47,3 +47,14 @@
     line-height: 1.5em;
 
 }
+#availableplatforms{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#availableplatforms img{
+    width: 10%;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
