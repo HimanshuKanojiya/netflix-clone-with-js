@@ -106,6 +106,22 @@
 /* End of Video Showcase Section */
 
 
+/* Slide Section */
+@media screen and (max-width:800px) {
+    #headers{
+            margin-left: 0px;
+    }
+    #Mainsection, #Mainsectiontoprated, #Mainsectionlatest, 
+    #Mainsectiontvseries, #Mainsectionactionmovies, #Mainsectionsciencefictionmovies, 
+    #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies {
+    margin-left: 0px; 
+    }
+}
+
+
+/*End of Slide Section
+
+
 /* Footer Section CSS */
 @media screen and (max-width:1250px) {
     #footersocialmediaicons img{
