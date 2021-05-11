@@ -161,3 +161,13 @@
 
 }
 /* End of Footer Section CSS */
+
+/*Browse Section Images*/
+@media screen and (max-width:800px) {
+    #sectionimages img{
+        width: 170px;
+    }
+    
+}
+
+/*End of Browse Section Images*/
