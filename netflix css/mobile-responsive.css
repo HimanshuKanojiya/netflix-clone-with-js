@@ -165,7 +165,7 @@
 /*Browse Section Images*/
 @media screen and (max-width:800px) {
     #sectionimages img{
-        width: 170px;
+        width: 160px;
     }
 }
 
