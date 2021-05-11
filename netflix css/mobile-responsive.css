@@ -19,7 +19,7 @@
         
     }
     #imageofsearch{
-        display: none;
+        display: inline;
     } 
     #otherheadersection #kid{
         display: inline;
@@ -29,7 +29,7 @@
     } 
     #searchwithimage{
         width: 35%;
-        display: inline;
+        display: none;
     }
 }
 
