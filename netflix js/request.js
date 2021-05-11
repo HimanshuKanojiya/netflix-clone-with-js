@@ -27,13 +27,16 @@ class Popularonnetflix{
     }
     settopopulararray(){
         for(let i = 0; i < this.content.results.length;i++){
-            let stucture = {
-                "movietitle":this.content.results[i].original_title,
-                "movieposter": `https://image.tmdb.org/t/p/w500/${this.content.results[i].backdrop_path}`,
-                "overview":this.content.results[i].overview,
-                "movieid":this.content.results[i].id,
+            if(this.content.results[i].backdrop_path !== null){
+                let stucture = {
+                    "movietitle":this.content.results[i].original_title,
+                    "movieposter": `https://image.tmdb.org/t/p/w300/${this.content.results[i].backdrop_path}`,
+                    "overview":this.content.results[i].overview,
+                    "movieid":this.content.results[i].id,
+                }
+                this.contentforpopular.push(stucture);
             }
-            this.contentforpopular.push(stucture);
+            
         }
     }
     working(){
@@ -47,5 +50,6 @@ class Popularonnetflix{
     }
     set_popular_movie(){
         this.popularimageobjects = this.contentforpopular[Math.floor(Math.random() * this.contentforpopular.length)];
+        this.popularimageobjects.movieposter = this.popularimageobjects.movieposter.replaceAll("w300","original");
     }
 }

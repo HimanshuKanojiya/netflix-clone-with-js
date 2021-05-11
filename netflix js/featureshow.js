@@ -1,8 +1,8 @@
-function contentretrive(){
+function contentretrive(PopularContentData){
     return `
     <div id="abovetext">
-            <h2>Mortal Kombat</h2>
-            <p>Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's</p>
+            <h2>${PopularContentData.movietitle}</h2>
+            <p>${PopularContentData.overview}</p>
             <div id="buttonclass">
                 <button id="playbutton">
                 <div id="playbuttonlogo">
@@ -31,23 +31,20 @@ function contentretrive(){
     `
 }
 
-function loadfeaturesection(portion){
-    let section = document.getElementById(portion);
-    section.innerHTML = contentretrive();
-}
 
-function loadmovie(){
+
+function loadmovie(videourl){
     htmlPortion = `
-    <iframe width="600" height="315" src="https://www.youtube.com/embed/NYH2sLid0Zc?modestbranding=1&controls=0&rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/${videourl}?modestbranding=1&controls=0&rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `
     let featureimage = document.getElementById("featureimage");
     featureimage.innerHTML = htmlPortion;
 }
-function playandpause(){
+function playandpause(videourl){
     let play = document.getElementById("playbutton");
     play.onclick = function(){
         if(document.getElementById("featureimage").childElementCount === 0){
-            loadmovie();
+            loadmovie(videourl);
             document.getElementById("playbuttontext").innerHTML = "Pause";
             document.getElementById("playbuttonlogo").firstElementChild.src = "./netflix images/pause-button.png";
         }
@@ -59,6 +56,20 @@ function playandpause(){
         }
     }
 }
+
+function loadfeaturesection(portion){
+    let VideoFetchAPI = new VideoShowCase();
+    VideoFetchAPI.set_url_for_video(PopularContentData.movieid);
+    VideoFetchAPI.fetchvideourl();
+    VideoFetchAPI.convertojson();
+    videourl = VideoFetchAPI.videocontent.results[0].key;
+
+    let section = document.getElementById(portion);
+    section.innerHTML = contentretrive(PopularContentData);
+    document.getElementById("featureimage").style.cssText = `background-image:url(${PopularContentData.movieposter})`;
+    playandpause(videourl);
+}
+
 loadfeaturesection("featuredshows");
-playandpause();
+
 

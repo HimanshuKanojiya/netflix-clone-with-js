@@ -1,3 +1,7 @@
+//
+PopularContentData = null;
+
+
 function sectionheaderload(title, id){
     let content = `
     <a href="./browse.html?type=${title}"><h2 id="headers">${title} <span><div id="fulltext">Explore All</div> > </span></h2></a>
@@ -21,6 +25,8 @@ function populatecontainonpage(url, genres, portion, title,featurevideo){
     req.settopopulararray();
     if(featurevideo === true){
         req.set_popular_movie();
+        PopularContentData = req.popularimageobjects;
+        
     }
     let content = createimageportion(req.contentforpopular);
     sectionheaderload(title,portion);

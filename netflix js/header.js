@@ -18,7 +18,7 @@ function headercontentretrieve(){
             <nav>
             <ul>
                 <li id="searchbar"><span><img id="imageofsearch" src="./netflix images/search-icon.png" alt="search-icon"><input id="searchwithimage" type="text"></span></li>
-                <li id="kid">Children</li>
+                <li id="kid"><a href="./browse.html?type=Kids Movies">Children</a></li>
                 <li id="gifticon"><img src="./netflix images/netflix gift box.png" alt="Gift Box"></li>
                 <li id="bellicon"><img src="./netflix images/netflix-bell-icon.png" alt="Bell Icon"></li>
                 <li>
@@ -61,3 +61,17 @@ window.addEventListener("scroll",function(){
         document.getElementById("headersection").style.background = "transparent";
     }
 });
+
+
+function searchbarscript(){
+    let search = document.getElementById("searchwithimage");
+    search.onchange = function(){
+        if(search.value.length >= 3){
+            window.location.href = `./browse.html?search_movie=${search.value}`;
+        }
+
+    }
+
+}
+
+searchbarscript();

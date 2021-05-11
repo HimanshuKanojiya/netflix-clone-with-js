@@ -72,6 +72,19 @@ let API_Mapping = {
         "Additional_Params":"&language=en-US",
         "Last_Page":null,
     },
+    "search movie":{
+        "API":"https://api.themoviedb.org/3/search/movie",
+        "Current_Page":1,
+        "Additional_Params":null,
+        "Last_Page":null,
+    },
+    "Kids Movies":{
+        "API":"https://api.themoviedb.org/3/discover/movie",
+        "Current_Page":1,
+        "Additional_Params":"&with_genres=16",
+        "Last_Page":null,
+    }
+    
 }
 
 function populatecontainonpage(url, genres, portion){
@@ -91,7 +104,16 @@ function populatecontainonpage(url, genres, portion){
 
 function loadContent(){
     let headofbrowse = document.getElementById("headers");
-    query = decodeURIComponent(window.location.search.split("=")[1]);
+    if(decodeURIComponent(window.location.search.split("=")[0]) === "?type"){
+        query = decodeURIComponent(window.location.search.split("=")[1]);
+    }
+    else{
+        let urlparam = decodeURIComponent(window.location.search.split("=")[0].split("?")[1].split("_").join(" "));
+        query = urlparam;
+        API_Mapping[query].Additional_Params = `&language=en-US&include_adult=true&query=${decodeURIComponent(window.location.search.split("=")[1])}`;
+    }
+    
+    
     headofbrowse.innerHTML = query;
     let Additional_Params = ""
     if(API_Mapping[query].Additional_Params === null){
