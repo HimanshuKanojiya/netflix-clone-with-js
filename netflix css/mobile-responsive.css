@@ -167,6 +167,9 @@
     #sectionimages img{
         width: 140px;
     }
+    #maincontentsection {
+        margin-left: 30px;
+    }
 }
 
 /*End of Browse Section Images*/
