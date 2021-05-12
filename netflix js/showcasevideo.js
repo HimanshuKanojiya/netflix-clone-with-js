@@ -29,7 +29,7 @@ class VideoShowCase{
         console.log(list.length)
         for(let i = 0;i<list.length;i++){
             if(list[i].logo_path !== null){
-                htmlContentTemplate = htmlContentTemplate + `<img src="https://image.tmdb.org/t/p/w300${list[i].logo_path}" alt=${list[i].provider_name}/>`;
+                htmlContentTemplate = htmlContentTemplate + `<div id="availableplatformcontent"><img src="https://image.tmdb.org/t/p/w300${list[i].logo_path}" alt="${list[i].provider_name}"/><p>${list[i].provider_name}</p></div>`;
             }
             
         }

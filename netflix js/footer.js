@@ -42,7 +42,7 @@ function footercontentretrieve(){
         <button>Service Code</button>
     </div>
     <div id="credits">
-    <p>Clone Made by Himanshu Kanojiya</p>
+    <p>Clone Made by </p><a href="./coder-profile.html">Himanshu Kanojiya</a>
     </div>
     
     

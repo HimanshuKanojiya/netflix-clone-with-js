@@ -50,9 +50,7 @@ searchclickimage.onclick = function(){
 
 }
 searchbarinput.onmouseout = function(){
-    alert("Intss")
     if(searchclickimage.style.getPropertyValue("display") === "none"){
-        alert("Int");
         searchbarinput.style.display = "none";
         searchclickimage.style.display = "inline";
     }
