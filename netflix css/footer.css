@@ -17,7 +17,13 @@
 #footersocialmediaicons img{
     width: 4%;
     padding-right: 25px;
+    cursor: pointer;
+    transition: all 456ms ease-in;
 }
+#footersocialmediaicons img:hover{
+    opacity: 70%;
+}
+
 #footerlinks{
     display: flex;
     flex-direction: row;
@@ -62,5 +68,8 @@
 #credits p{
     font-size: 18px;
 }
-
+#credits a{
+    text-decoration: none;
+    color: white;
+}
 

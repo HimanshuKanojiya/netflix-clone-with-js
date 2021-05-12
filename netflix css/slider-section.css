@@ -28,7 +28,8 @@ a{
 
 
 #Mainsection, #Mainsectiontoprated, #Mainsectionlatest, #Mainsectiontvseries, #Mainsectionactionmovies, 
-#Mainsectionsciencefictionmovies, #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies
+#Mainsectionsciencefictionmovies, #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies,
+#Mainsectiontvpopularseries, #Mainsectiontvtopratedseries
 {
     object-fit: contain;
     display: flex;
@@ -36,18 +37,20 @@ a{
     margin-left: 30px;
     overflow-y: hidden;
     filter: brightness(1.2);
+    scrollbar-width: none;
 }
 #Mainsection::-webkit-scrollbar, #Mainsectiontoprated::-webkit-scrollbar, #Mainsectionlatest::-webkit-scrollbar,
 #Mainsectiontvseries::-webkit-scrollbar, #Mainsectionactionmovies::-webkit-scrollbar,
 #Mainsectionsciencefictionmovies::-webkit-scrollbar,#Mainsectionwarmovies::-webkit-scrollbar,
-#Mainsectionthrillermovies::-webkit-scrollbar, #Mainsectionhorrormovies::-webkit-scrollbar
+#Mainsectionthrillermovies::-webkit-scrollbar, #Mainsectionhorrormovies::-webkit-scrollbar,
+#Mainsectiontvpopularseries::-webkit-scrollbar, #Mainsectiontvtopratedseries::-webkit-scrollbar
 {
     display: none;
 }
 
 #Mainsection img, #Mainsectiontoprated img, #Mainsectionlatest img, #Mainsectiontvseries img, #Mainsectionactionmovies img,
 #Mainsectionsciencefictionmovies img, #Mainsectionwarmovies img, #Mainsectionthrillermovies img,
-#Mainsectionhorrormovies img
+#Mainsectionhorrormovies img, #Mainsectiontvpopularseries img, #Mainsectiontvtopratedseries img
 {
     cursor: pointer;
     width: 230px;
@@ -61,7 +64,8 @@ a{
 }
 #Mainsection img:hover, #Mainsectiontoprated img:hover, #Mainsectionlatest img:hover, #Mainsectiontvseries img:hover,
 #Mainsectionactionmovies img:hover, #Mainsectionsciencefictionmovies img:hover,
-#Mainsectionwarmovies img:hover, #Mainsectionthrillermovies img:hover, #Mainsectionhorrormovies img:hover
+#Mainsectionwarmovies img:hover, #Mainsectionthrillermovies img:hover, #Mainsectionhorrormovies img:hover,
+#Mainsectiontvpopularseries img:hover, #Mainsectiontvtopratedseries img:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }

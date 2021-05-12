@@ -121,7 +121,9 @@
     }
     #Mainsection, #Mainsectiontoprated, #Mainsectionlatest, 
     #Mainsectiontvseries, #Mainsectionactionmovies, #Mainsectionsciencefictionmovies, 
-    #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies {
+    #Mainsectionwarmovies, #Mainsectionthrillermovies, #Mainsectionhorrormovies, #Mainsectiontvpopularseries,
+    #Mainsectiontvtopratedseries 
+    {
     margin-left: 0px; 
     }
 }
