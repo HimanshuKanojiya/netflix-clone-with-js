@@ -5,7 +5,6 @@ function footercontentretrieve(){
             <img src="./netflix images/instagram-logo.png" alt="Instagram Logo"/>
             <img src="./netflix images/twitter-logo.png" alt="Twitter Logo"/>
             <img src="./netflix images/youtube-logo.png" alt="YouTube Logo"/>
-            <img src="" alt="">
         </div>
         <div id="footerlinks">
         <div id="footermenu">

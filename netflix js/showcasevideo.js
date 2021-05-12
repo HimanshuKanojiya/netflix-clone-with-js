@@ -9,6 +9,7 @@ class VideoShowCase{
         this.set_content_for_video = {
 
         }
+        this.switchtoTv = false;
 
     }
 
@@ -16,17 +17,28 @@ class VideoShowCase{
         this.url = `https://api.themoviedb.org/3/movie/${value}/videos`; 
     }
 
+    set_url_for_video_tv(value){
+        this.url = `https://api.themoviedb.org/3/tv/${value}/videos`; 
+    }
+
     set_url_for_details(value){
         this.url = `https://api.themoviedb.org/3/movie/${value}`;
+    }
+
+    set_url_for_details_tv(value){
+        this.url = `https://api.themoviedb.org/3/tv/${value}`;
     }
 
     set_url_for_movie_providers(value){
         this.url = `https://api.themoviedb.org/3/movie/${value}/watch/providers`;
     }
 
+    set_url_for_movie_providers_tv(value){
+        this.url = `https://api.themoviedb.org/3/tv/${value}/watch/providers`;
+    }
+
     watchproviderslistpopulator(list){
         let htmlContentTemplate = "";
-        console.log(list.length)
         for(let i = 0;i<list.length;i++){
             if(list[i].logo_path !== null){
                 htmlContentTemplate = htmlContentTemplate + `<div id="availableplatformcontent"><img src="https://image.tmdb.org/t/p/w300${list[i].logo_path}" alt="${list[i].provider_name}"/><p>${list[i].provider_name}</p></div>`;
@@ -37,34 +49,67 @@ class VideoShowCase{
     }
 
     main_content_set(value){
-        this.set_url_for_video(value);
-        this.fetchvideourl();
-        this.convertojson();
-        this.set_content_for_video["embed_url"] = this.videocontent.results[0].key;
-        
-        this.set_url_for_details(value);
-        this.fetchvideourl();
-        this.convertojson();
-        this.set_content_for_video["title"] = this.videocontent.original_title;
-        this.set_content_for_video["overview"] = this.videocontent.overview;
-        this.set_content_for_video["releasedate"] = this.videocontent.release_date;
-        this.set_content_for_video["ratings"] = this.videocontent.vote_average;
+        try{
+            this.set_url_for_video(value);
+            this.fetchvideourl();
+            this.convertojson();
+            this.set_content_for_video["embed_url"] = this.videocontent.results[0].key;
 
-        this.set_url_for_movie_providers(value);
-        this.fetchvideourl();
-        this.convertojson();
+            this.set_url_for_details(value);
+            this.fetchvideourl();
+            this.convertojson();
+            this.set_content_for_video["title"] = this.videocontent.original_title;
+            this.set_content_for_video["overview"] = this.videocontent.overview;
+            this.set_content_for_video["releasedate"] = this.videocontent.release_date;
+            this.set_content_for_video["ratings"] = this.videocontent.vote_average;
 
-        if(this.videocontent.results.US !== undefined && this.videocontent.results.US.buy !== undefined 
-            && this.videocontent.results.US.buy.length >= 1){
-            this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.buy);
+            this.set_url_for_movie_providers(value);
+            this.fetchvideourl();
+            this.convertojson();
+
+            if(this.videocontent.results.US !== undefined && this.videocontent.results.US.buy !== undefined 
+                && this.videocontent.results.US.buy.length >= 1){
+                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.buy);
+            }
+            else if(this.videocontent.results.US !== undefined && this.videocontent.results.US.flatrate !== undefined 
+                && this.videocontent.results.US.flatrate.length >= 1){
+                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.flatrate);
+            }
+            else{
+                this.set_content_for_video["Movieproviders"] = "No Data Available Yet...";
+            }
         }
-        else if(this.videocontent.results.US !== undefined && this.videocontent.results.US.flatrate !== undefined 
-            && this.videocontent.results.US.flatrate.length >= 1){
-            this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.flatrate);
+        catch{
+            this.set_url_for_video_tv(value);
+            this.fetchvideourl();
+            this.convertojson();
+            this.set_content_for_video["embed_url"] = this.videocontent.results[0].key;
+
+            this.set_url_for_details_tv(value);
+            this.fetchvideourl();
+            this.convertojson();
+            this.set_content_for_video["title"] = this.videocontent.original_name;
+            this.set_content_for_video["overview"] = this.videocontent.overview;
+            this.set_content_for_video["releasedate"] = this.videocontent.first_air_date;
+            this.set_content_for_video["ratings"] = this.videocontent.vote_average;
+
+            this.set_url_for_movie_providers_tv(value);
+            this.fetchvideourl();
+            this.convertojson();
+
+            if(this.videocontent.results.US !== undefined && this.videocontent.results.US.buy !== undefined 
+                && this.videocontent.results.US.buy.length >= 1){
+                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.buy);
+            }
+            else if(this.videocontent.results.US !== undefined && this.videocontent.results.US.flatrate !== undefined 
+                && this.videocontent.results.US.flatrate.length >= 1){
+                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.flatrate);
+            }
+            else{
+                this.set_content_for_video["Movieproviders"] = "No Data Available Yet...";
+            }
         }
-        else{
-            this.set_content_for_video["Movieproviders"] = "No Data Available Yet...";
-        }
+        console.clear();
         
     }
 

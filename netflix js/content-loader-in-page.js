@@ -36,9 +36,11 @@ function populatecontainonpage(url, genres, portion, title,featurevideo){
 populatecontainonpage("https://api.themoviedb.org/3/movie/popular",null,"Mainsection","Popular Movies",true);
 populatecontainonpage("https://api.themoviedb.org/3/movie/top_rated",null,"Mainsectiontoprated","Top Rated Movies");
 populatecontainonpage("https://api.themoviedb.org/3/movie/now_playing",null,"Mainsectionlatest","Latest Movies");
-// populatecontainonpage("https://api.themoviedb.org/3/trending/tv/week",null,"Mainsectiontvseries","Trending TV Series");
 populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genres=12","Mainsectionactionmovies","Action Movies");
 populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genres=878","Mainsectionsciencefictionmovies","Science Fiction Movies");
 populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genres=10752","Mainsectionwarmovies","War Movies");
 populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genres=53","Mainsectionthrillermovies","Thriller Movies");
 populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genres=27","Mainsectionhorrormovies","Horror Movies");
+populatecontainonpage("https://api.themoviedb.org/3/trending/tv/week",null,"Mainsectiontvseries","Trending TV Series");
+populatecontainonpage("https://api.themoviedb.org/3/tv/popular",null,"Mainsectiontvpopularseries","Popular TV Series");
+populatecontainonpage("https://api.themoviedb.org/3/tv/top_rated",null,"Mainsectiontvtopratedseries","Top Rated TV Series")
