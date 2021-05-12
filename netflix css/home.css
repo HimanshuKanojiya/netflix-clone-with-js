@@ -17,6 +17,7 @@ body{
 @media screen and (max-width:950px) {
     #imageslogo{
         width:25%;
+        user-select: none;
     }
     #featuredshows{
         display: flex;

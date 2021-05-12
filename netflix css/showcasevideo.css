@@ -45,6 +45,7 @@
 #title-section p{
     font-size: 16px;
     line-height: 1.5em;
+    margin-bottom: 14px;
 
 }
 #availableplatforms{
@@ -55,6 +56,17 @@
 #availableplatforms img{
     width: 10%;
     margin-right: 15px;
-    margin-top: 15px;
-    border-radius: 15px;
+    border-radius: 8px;
+}
+#availableplatformcontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 14px;
+    flex-wrap: wrap;
+}
+#availableplatformcontent p{
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 0px !important;
 }

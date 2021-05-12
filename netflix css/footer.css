@@ -57,5 +57,10 @@
     text-align: center;
     margin-top: 14px;
     color: gray;
-    font-size: 14px;
+    margin: 14px 0 14px 0px;
 }
+#credits p{
+    font-size: 18px;
+}
+
+

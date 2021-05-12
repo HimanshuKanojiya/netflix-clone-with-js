@@ -1,0 +1,118 @@
+body{
+    background-image: url("../netflix images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-blend-mode: soft-light;
+    user-select: none;
+
+}
+
+#profileofcoder{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-right: 5px;
+}
+#content strong{
+    font-size: 33px;
+    word-spacing: 2px;
+    margin-bottom: 14px;
+    color: red;
+    letter-spacing: 4px;
+}
+#content h2{
+    font-size: 28px;
+    letter-spacing: 7px;
+    margin-bottom: 14px;
+}
+aside img{
+    width: 400px;
+    height: 400px;
+    border-radius: 9021998px;
+    filter: brightness(1.2);
+}
+    
+#borderinprofile{
+    width: 90%;
+    margin: 14px 0px 14px 0px;
+    border-width: 1px;
+}
+#content p{
+    word-wrap: break-word;
+    width: 90%;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+#address{
+    margin-top: 14px;
+    font-size: 16px;
+}
+#address h3{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+}
+#socialmediaicons{
+    width: 100%;
+    padding-top: 14px;
+}
+#socialmediaicons img{
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    transition: all 450ms ease-in;
+}
+#socialmediaicons img:hover{
+    opacity: 40%;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:600px) {
+    body{
+        background-size: contain;
+    }
+    #profileofcoder{
+        flex-direction:column;
+    }
+    aside img {
+        width: 250px;
+        height: 250px;
+        border-radius: 9021998px;
+        filter: brightness(1.2);
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: break-word;
+        flex-wrap: wrap;
+        width: fit-content;
+        text-align: center;
+        margin: 25px;
+    }
+    #address {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
