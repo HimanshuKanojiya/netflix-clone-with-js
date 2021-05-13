@@ -1,7 +1,13 @@
-let VideoShowCaseResponse = "";
+//This script is not depended on other script
+//It will be loaded in all pages
 
+
+let VideoShowCaseResponse = ""; //For Saving API Responses
+
+//Class for Fetching Video URL, and Video Details for showing about the movie/tv series
 class VideoShowCase{
     constructor(){
+        //class variable
         this.url = "";
         this.API_Key =  "ce77aaeb83dc417f01169d443f16255a&language=en-US";
         this.additionalpararmatend = "";
@@ -14,27 +20,23 @@ class VideoShowCase{
     }
 
     set_url_for_video(value){
+        //This function is for setting API for fetching Movie Video
         this.url = `https://api.themoviedb.org/3/movie/${value}/videos`; 
     }
 
     set_url_for_video_tv(value){
+        //This function is for setting API for fetching TV Video
         this.url = `https://api.themoviedb.org/3/tv/${value}/videos`; 
     }
 
     set_url_for_details(value){
+        //This function is for setting API for fetching Movie Details
         this.url = `https://api.themoviedb.org/3/movie/${value}`;
     }
 
     set_url_for_details_tv(value){
+        //This function is for setting API for fetching TV Details
         this.url = `https://api.themoviedb.org/3/tv/${value}`;
-    }
-
-    set_url_for_movie_providers(value){
-        this.url = `https://api.themoviedb.org/3/movie/${value}/watch/providers`;
-    }
-
-    set_url_for_movie_providers_tv(value){
-        this.url = `https://api.themoviedb.org/3/tv/${value}/watch/providers`;
     }
 
     watchproviderslistpopulator(list){
@@ -49,6 +51,7 @@ class VideoShowCase{
     }
 
     main_content_set(value){
+        //This function is resposible for Handling Fetching work
         try{
             this.set_url_for_video(value);
             this.fetchvideourl();
@@ -63,21 +66,6 @@ class VideoShowCase{
             this.set_content_for_video["releasedate"] = this.videocontent.release_date;
             this.set_content_for_video["ratings"] = this.videocontent.vote_average;
 
-            this.set_url_for_movie_providers(value);
-            this.fetchvideourl();
-            this.convertojson();
-
-            if(this.videocontent.results.US !== undefined && this.videocontent.results.US.buy !== undefined 
-                && this.videocontent.results.US.buy.length >= 1){
-                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.buy);
-            }
-            else if(this.videocontent.results.US !== undefined && this.videocontent.results.US.flatrate !== undefined 
-                && this.videocontent.results.US.flatrate.length >= 1){
-                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.flatrate);
-            }
-            else{
-                this.set_content_for_video["Movieproviders"] = "No Data Available Yet...";
-            }
         }
         catch{
             this.set_url_for_video_tv(value);
@@ -93,21 +81,6 @@ class VideoShowCase{
             this.set_content_for_video["releasedate"] = this.videocontent.first_air_date;
             this.set_content_for_video["ratings"] = this.videocontent.vote_average;
 
-            this.set_url_for_movie_providers_tv(value);
-            this.fetchvideourl();
-            this.convertojson();
-
-            if(this.videocontent.results.US !== undefined && this.videocontent.results.US.buy !== undefined 
-                && this.videocontent.results.US.buy.length >= 1){
-                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.buy);
-            }
-            else if(this.videocontent.results.US !== undefined && this.videocontent.results.US.flatrate !== undefined 
-                && this.videocontent.results.US.flatrate.length >= 1){
-                this.set_content_for_video["Movieproviders"] = this.watchproviderslistpopulator(this.videocontent.results.US.flatrate);
-            }
-            else{
-                this.set_content_for_video["Movieproviders"] = "No Data Available Yet...";
-            }
         }
         console.clear();
         
@@ -130,6 +103,7 @@ class VideoShowCase{
         xhttp.send();
     }
     convertojson(){
+        //This function will convert response to JSON
         this.videocontent = JSON.parse(VideoShowCaseResponse);
     }
 }
@@ -157,10 +131,6 @@ function ContentRetriveforvideoshowcase(content){
             <strong>${content.title}</strong>
             <p id="ratebar">Ratings: ${content.ratings}<span id="othermoviedetails">${content.releasedate}</span></p>
             <p>${content.overview}</p>
-            <strong>Movie Available on:</strong>
-            <div id="availableplatforms">
-            ${content.Movieproviders}
-            </div>
         </div>
     `
 

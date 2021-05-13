@@ -1,4 +1,8 @@
+//This Script is for loading header section in all pages
+//This script is not depended on other scripts
+
 function headercontentretrieve(){
+    //This function will return header HTML Codes
     return `
     <div id="imageslogo">
             <a href = "./index.html"><img src="./netflix images/netflix-logo.png" alt="Netflix Logo"></a>
@@ -32,44 +36,58 @@ function headercontentretrieve(){
     `
 }
 function loadheaderinpage(portion){
+    //This function is for putting content in the targeted container
+    //sectionname variable is container ID
     let section = document.getElementById(portion);
     section.innerHTML = headercontentretrieve();
 }
+//Calling function to load Header
 loadheaderinpage("headersection");
 
 /*
 Search Bar Expander
 */
-let searchclickimage = document.getElementById("imageofsearch");
-let searchbarinput = document.getElementById("searchwithimage");
-searchclickimage.onclick = function(){
-    if(searchbarinput.style.getPropertyValue("display") === "" || searchbarinput.style.getPropertyValue("display") === "none"){
-        searchbarinput.style.display = "inline";
-        searchclickimage.style.display = "none";
+function searchbarexpander(){
+    let searchclickimage = document.getElementById("imageofsearch");
+    let searchbarinput = document.getElementById("searchwithimage");
+    searchclickimage.onclick = function(){
+        if(searchbarinput.style.getPropertyValue("display") === "" || searchbarinput.style.getPropertyValue("display") === "none"){
+            searchbarinput.style.display = "inline";
+            searchclickimage.style.display = "none";
+            }
+
+    }
+    searchbarinput.onmouseout = function(){
+        if(searchclickimage.style.getPropertyValue("display") === "none"){
+            searchbarinput.style.display = "none";
+            searchclickimage.style.display = "inline";
         }
-
-}
-searchbarinput.onmouseout = function(){
-    if(searchclickimage.style.getPropertyValue("display") === "none"){
-        searchbarinput.style.display = "none";
-        searchclickimage.style.display = "inline";
     }
 }
+searchbarexpander();
+//End of Search Bar Expander
 
 
-//HeaderBackground Changer
-window.addEventListener("scroll",function(){
-    let docxx = document.getElementById("maincontentsection");
-    if(window.pageYOffset > docxx.offsetTop){
-        document.getElementById("headersection").style.background = "black";
-    }
-    else{
-        document.getElementById("headersection").style.background = "transparent";
-    }
-});
+function headerbackgroundchanger(){
+    //HeaderBackground Changer
+    //These codes will change header background color
+    //This will happen if we threshold the scrolling limit
+    window.addEventListener("scroll",function(){
+        let docxx = document.getElementById("maincontentsection");
+        if(window.pageYOffset > docxx.offsetTop){
+            document.getElementById("headersection").style.background = "black";
+        }
+        else{
+            document.getElementById("headersection").style.background = "transparent";
+        }
+    });
+}
+headerbackgroundchanger();
 
 
 function searchbarscript(){
+    //This function is launch the search query, if user passes 
+    //more than 3 characters in the search bar
     let search = document.getElementById("searchwithimage");
     search.onchange = function(){
         if(search.value.length >= 3){
@@ -79,5 +97,5 @@ function searchbarscript(){
     }
 
 }
-
+//Load the searchbarscript
 searchbarscript();
