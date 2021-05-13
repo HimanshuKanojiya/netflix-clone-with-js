@@ -162,7 +162,7 @@ function loadContent(){
 
         //IMP: include_adult=false, will not fetch
         //adult movies for Search Based Queries
-        API_Mapping[query].Additional_Params = `&language=en-US&include_adult=true&query=${decodeURIComponent(window.location.search.split("=")[1])}`;
+        API_Mapping[query].Additional_Params = `&language=en-US&include_adult=false&query=${decodeURIComponent(window.location.search.split("=")[1])}`;
     }
     
     //Replace the title based on Category or User Search

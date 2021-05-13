@@ -128,7 +128,7 @@ let track = 0;
 let showcasewindow = document.getElementById("showcasevideo");
 window.addEventListener("scroll", function(){
     let mainsection = this.document.getElementById("maincontentsection");
-    if(window.pageYOffset > mainsection.offsetHeight + 100 && 
+    if(window.pageYOffset > mainsection.offsetHeight - 200 && 
         (showcasewindow.style.display === "" || showcasewindow.style.display === "none") && run === false){
             if(track < arrayofremainingcontent.length){
                 populatecontainonpage(arrayofremainingcontent[track].API,arrayofremainingcontent[track].Additional_Params,
