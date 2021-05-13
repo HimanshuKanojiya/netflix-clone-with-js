@@ -92,6 +92,9 @@ aside img{
     #profileofcoder{
         flex-direction:column;
     }
+    aside{
+        margin-top: 50px;
+    }
     aside img {
         width: 250px;
         height: 250px;
