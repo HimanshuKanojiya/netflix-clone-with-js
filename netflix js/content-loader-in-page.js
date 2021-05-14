@@ -4,7 +4,7 @@
 PopularContentData = null; //This variable is used by Sectonheaderload to set top feature show data object
 
 function sectionheaderload(title, id){
-    //This function will loaded Header and container
+    //This function will load Category/Page Title and container
     //where related category movies and tv show will be loaded
     //Title will be set with LINK and header
     //id is the name of the container where images will be saved
@@ -19,7 +19,7 @@ function sectionheaderload(title, id){
 
 
 function populatecontainonpage(url, genres, portion, title,featurevideo){
-    //This Function is depened on "request.js code"
+    //This Function is depended on "request.js code"
     //It will load content in the homepage slider sections
     //URL: For API
     //genres: For additional Parameters of API

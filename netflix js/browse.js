@@ -2,7 +2,7 @@
 //And User Search Pages
 
 
-//Object Which contains API Related Information
+//Below Object contains API Related Information
 //For Category Type Pages
 //It stores API URL, Additional Parameters
 //& Page Number
@@ -110,7 +110,7 @@ function populatecontainonpage(url, genres, portion){
     //This function is depended on "request.js" code
     //to load the content
 
-    let req = new Popularonnetflix(); //initialize the class
+    let req = new Popularonnetflix(); //initializing the class
     req.set_url(url); //set the API URL
 
     //if genres is not null
@@ -120,9 +120,9 @@ function populatecontainonpage(url, genres, portion){
         req.set_param_at_end(genres);
 
     }
-    req.fetchpopular(); //Initiate the API Call
-    req.convertojson(); //Convert response to JSON object
-    req.settopopulararray(); //Arrange Response in desired way
+    req.fetchpopular(); //Initiating the API Call
+    req.convertojson(); //Converting response to JSON object
+    req.settopopulararray(); //Arranging Response in desired way
     req.set_popular_movie(); //Randomly chooses the Movie for Top Movie Feature Section
 
     //Below Function is depended on the "popularcontentpopulate.js code"

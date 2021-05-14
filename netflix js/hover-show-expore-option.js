@@ -1,6 +1,6 @@
 //This script is not depended on other scripts, it will only work in homepage "index.html"
 //This Script is for doing these things (same as Netflix):
-//1. If User move mouse over the image then it will show '>' along the category title
+//1. If User move mouse over the image then it will show '>' with the category title
 //2. If User move mouse out of the image then it will disappear '>' from the category title
 //3. If user move mouse over the category title, then '>' and explore all will be visible
 //4. If user move mouse out of the category title, then '>' and explore all will be hidden
