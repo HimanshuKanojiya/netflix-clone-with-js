@@ -55,17 +55,25 @@ a{
     cursor: pointer;
     width: 230px;
     height: 130px;
-    padding-right: 15px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     transition: all 250ms ease;
+    margin-right: 14px;
 }
 #Mainsection img:hover, #Mainsectiontoprated img:hover, #Mainsectionlatest img:hover, #Mainsectiontvseries img:hover,
 #Mainsectionactionmovies img:hover, #Mainsectionsciencefictionmovies img:hover,
 #Mainsectionwarmovies img:hover, #Mainsectionthrillermovies img:hover, #Mainsectionhorrormovies img:hover,
 #Mainsectiontvpopularseries img:hover, #Mainsectiontvtopratedseries img:hover
 {
-    transform: scale(1.08);
+    transform: scale(1.04);
+    user-select: none;
+}
+#Mainsection img:active, #Mainsectiontoprated img:active, #Mainsectionlatest img:active, #Mainsectiontvseries img:active,
+#Mainsectionactionmovies img:active, #Mainsectionsciencefictionmovies img:active,
+#Mainsectionwarmovies img:active, #Mainsectionthrillermovies img:active, #Mainsectionhorrormovies img:active,
+#Mainsectiontvpopularseries img:active, #Mainsectiontvtopratedseries img:active
+{
+    transform: scale(1.04);
 }

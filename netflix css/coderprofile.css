@@ -60,6 +60,15 @@ aside img{
     letter-spacing: 1px;
     font-size: 18px;
 }
+#content span{
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+#bwskills{
+    color: red;
+    margin-left: 6px;
+    margin-right: 6px;
+}
 #address{
     margin-top: 14px;
     font-size: 16px;
@@ -91,6 +100,7 @@ aside img{
     }
     #profileofcoder{
         flex-direction:column;
+        top: 50%;
     }
     aside{
         margin-top: 50px;
@@ -110,12 +120,21 @@ aside img{
         text-align: center;
         margin: 25px;
     }
+    #content span{
+        margin-top: 14px;
+        margin-bottom: 14px;
+        text-align: -webkit-center;
+    }
+    
     #address {
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    #socialmediaicons{
+        display: none;
     }
     
 }
