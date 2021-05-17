@@ -50,9 +50,10 @@
 
     }
     #abovetext{
-        margin-top: 90px;
-        margin-left: 15px;
-        width: auto;
+        width: 60vw;
+        bottom: 2em;
+        left: 0;
+        margin-left: 1em;
     }
     #abovetext h2{
         font-size: 18px;
