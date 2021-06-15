@@ -1,4 +1,4 @@
-function contentretrive(PopularContentData){
+const contentretrive = (PopularContentData) => {
     return `
     <div id="abovetext">
             <h2>${PopularContentData.movietitle}</h2>
@@ -33,16 +33,16 @@ function contentretrive(PopularContentData){
 
 
 
-function loadmovie(videourl){
+const loadmovie = (videourl) => {
     htmlPortion = `
     <iframe width="600" height="315" src="https://www.youtube.com/embed/${videourl}?modestbranding=1&controls=0&rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `
-    let featureimage = document.getElementById("featureimage");
+    const featureimage = document.getElementById("featureimage");
     featureimage.innerHTML = htmlPortion;
 }
-function playandpause(videourl){
-    let play = document.getElementById("playbutton");
-    play.onclick = function(){
+const playandpause = (videourl) => {
+    const play = document.getElementById("playbutton");
+    play.onclick = () => {
         if(document.getElementById("featureimage").childElementCount === 0){
             loadmovie(videourl);
             document.getElementById("playbuttontext").innerHTML = "Pause";
@@ -57,14 +57,14 @@ function playandpause(videourl){
     }
 }
 
-function loadfeaturesection(portion){
-    let VideoFetchAPI = new VideoShowCase();
+const loadfeaturesection = (portion) => {
+    const VideoFetchAPI = new VideoShowCase();
     VideoFetchAPI.set_url_for_video(PopularContentData.movieid);
     VideoFetchAPI.fetchvideourl();
     VideoFetchAPI.convertojson();
     videourl = VideoFetchAPI.videocontent.results[0].key;
 
-    let section = document.getElementById(portion);
+    const section = document.getElementById(portion);
     section.innerHTML = contentretrive(PopularContentData);
     document.getElementById("featureimage").style.cssText = `background-image:url(${PopularContentData.movieposter})`;
     playandpause(videourl);
