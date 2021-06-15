@@ -1,7 +1,7 @@
 //This Script is for loading header section in all pages
 //This script is not depended on other scripts
 
-function headercontentretrieve(){
+const headercontentretrieve = () => {
     //This function will return header HTML Codes
     return `
     <div id="imageslogo">
@@ -35,10 +35,10 @@ function headercontentretrieve(){
         </div>
     `
 }
-function loadheaderinpage(portion){
+const loadheaderinpage = (portion) => {
     //This function is for putting content in the targeted container
     //sectionname variable is container ID
-    let section = document.getElementById(portion);
+    const section = document.getElementById(portion);
     section.innerHTML = headercontentretrieve();
 }
 //Calling function to load Header
@@ -47,17 +47,17 @@ loadheaderinpage("headersection");
 /*
 Search Bar Expander
 */
-function searchbarexpander(){
-    let searchclickimage = document.getElementById("imageofsearch");
-    let searchbarinput = document.getElementById("searchwithimage");
-    searchclickimage.onclick = function(){
+const searchbarexpander = () => {
+    const searchclickimage = document.getElementById("imageofsearch");
+    const searchbarinput = document.getElementById("searchwithimage");
+    searchclickimage.onclick = () => {
         if(searchbarinput.style.getPropertyValue("display") === "" || searchbarinput.style.getPropertyValue("display") === "none"){
             searchbarinput.style.display = "inline";
             searchclickimage.style.display = "none";
             }
 
     }
-    searchbarinput.onmouseout = function(){
+    searchbarinput.onmouseout = () => {
         if(searchclickimage.style.getPropertyValue("display") === "none"){
             searchbarinput.style.display = "none";
             searchclickimage.style.display = "inline";
@@ -68,12 +68,12 @@ searchbarexpander();
 //End of Search Bar Expander
 
 
-function headerbackgroundchanger(){
+const headerbackgroundchanger = () => {
     //HeaderBackground Changer
     //These codes will change header background color
     //This will happen if we threshold the scrolling limit
     window.addEventListener("scroll",function(){
-        let docxx = document.getElementById("maincontentsection");
+        const docxx = document.getElementById("maincontentsection");
         if(window.pageYOffset > docxx.offsetTop){
             document.getElementById("headersection").style.background = "black";
         }
@@ -85,11 +85,11 @@ function headerbackgroundchanger(){
 headerbackgroundchanger();
 
 
-function searchbarscript(){
+const searchbarscript = () => {
     //This function is launch the search query, if user passes 
     //more than 3 characters in the search bar
-    let search = document.getElementById("searchwithimage");
-    search.onchange = function(){
+    const search = document.getElementById("searchwithimage");
+    search.onchange = () => {
         if(search.value.length >= 3){
             window.location.href = `./browse.html?search_movie=${search.value}`;
         }
