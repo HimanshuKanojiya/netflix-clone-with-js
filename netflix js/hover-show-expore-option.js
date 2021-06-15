@@ -6,9 +6,9 @@
 //4. If user move mouse out of the category title, then '>' and explore all will be hidden
 
 
-function hovershowexploreoptions(){
-    let documentbody = document.getElementById("maincontentsection");
-    documentbody.onmouseover = function(event){
+const hovershowexploreoptions = () => {
+    const documentbody = document.getElementById("maincontentsection");
+    documentbody.onmouseover = (event) => {
         if(event.target.tagName !== null){
             if(event.target.tagName === "IMG"){
                 if(event.target.parentElement.previousElementSibling.tagName !== null && 
@@ -33,7 +33,7 @@ function hovershowexploreoptions(){
         
     }
 
-    documentbody.onmouseout =  function(event){
+    documentbody.onmouseout = (event) => {
         if(event.target.tagName !== null){
             if(event.target.tagName === "IMG"){
                 if(event.target.parentElement.previousElementSibling.tagName !== null && 
