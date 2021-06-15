@@ -6,7 +6,7 @@
 //For Category Type Pages
 //It stores API URL, Additional Parameters
 //& Page Number
-let API_Mapping = {
+const API_Mapping = {
     "Popular Movies":{
         "API":"https://api.themoviedb.org/3/movie/popular",
         "Current_Page":1,
