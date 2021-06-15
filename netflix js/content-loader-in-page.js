@@ -3,7 +3,7 @@
 
 PopularContentData = null; //This variable is used by Sectonheaderload to set top feature show data object
 
-function sectionheaderload(title, id){
+const sectionheaderload = (title, id) => {
     //This function will load Category/Page Title and container
     //where related category movies and tv show will be loaded
     //Title will be set with LINK and header
@@ -13,12 +13,12 @@ function sectionheaderload(title, id){
     <div id=${id}></div>
 
     `
-    let section = document.getElementById("maincontentsection");
+    const section = document.getElementById("maincontentsection");
     section.innerHTML += content;
 }
 
 
-function populatecontainonpage(url, genres, portion, title,featurevideo){
+const populatecontainonpage = (url, genres, portion, title,featurevideo) => {
     //This Function is depended on "request.js code"
     //It will load content in the homepage slider sections
     //URL: For API
@@ -27,7 +27,7 @@ function populatecontainonpage(url, genres, portion, title,featurevideo){
     //title: Title of the Page
     //featurevideo: option but should be call at least once
 
-    let req = new Popularonnetflix(); //Initialize the class
+    const req = new Popularonnetflix(); //Initialize the class
     req.set_url(url); //Setting API URL
     
     //If genres is not null, then it will be added at the end of API
@@ -51,7 +51,7 @@ function populatecontainonpage(url, genres, portion, title,featurevideo){
         
     }
 
-    let content = createimageportion(req.contentforpopular); //For Creating images HTML codes in BULK
+    const content = createimageportion(req.contentforpopular); //For Creating images HTML codes in BULK
 
     //below two functions are depended on the "popularcontentpopulate.js code"
     sectionheaderload(title,portion); //It will load the header and container where images will be saved
