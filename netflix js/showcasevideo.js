@@ -111,9 +111,9 @@ class VideoShowCase{
 //Public Variable for stroing location of image
 let location_image = null;
 
-function videocloser(){
-    let closethis = document.getElementById("closethis");
-    closethis.onclick = function(){
+const videocloser = () => {
+    const closethis = document.getElementById("closethis");
+    closethis.onclick = () => {
         document.getElementById("showcasevideo").innerHTML = "";
         document.getElementById("showcasevideo").style.display = "none";
         window.scrollTo(0,location_image);
@@ -121,7 +121,7 @@ function videocloser(){
 }
 
 
-function ContentRetriveforvideoshowcase(content){
+const ContentRetriveforvideoshowcase = (content) => {
     return `
     <div id="closethis">X</div>
         <div id="video">
@@ -136,9 +136,9 @@ function ContentRetriveforvideoshowcase(content){
 
 }
 
-function showcasetrailer(movied, loc){
+const showcasetrailer = (movied, loc) => {
     location_image = loc;
-    let Showcaseapi = new VideoShowCase();
+    const Showcaseapi = new VideoShowCase();
     Showcaseapi.main_content_set(movied);
     document.getElementById("showcasevideo").style.display = "flex";
     document.getElementById("showcasevideo").innerHTML = ContentRetriveforvideoshowcase(Showcaseapi.set_content_for_video);
