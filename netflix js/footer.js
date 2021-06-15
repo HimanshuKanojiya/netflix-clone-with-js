@@ -1,7 +1,7 @@
 //This Script is for loading footer section in all pages
 //This script is not depended on other scripts
 
-function footercontentretrieve(){
+const footercontentretrieve = () => {
     //this function will return the footer HTML code
     return `
     <div id="footersocialmediaicons">
@@ -51,10 +51,10 @@ function footercontentretrieve(){
     
     `
 }
-function putcontentinfootersection(sectionname){
+const putcontentinfootersection = (sectionname) => {
     //This function is for putting content in the targeted container
     //sectionname variable is container ID
-    let section = document.getElementById(sectionname);
+    const section = document.getElementById(sectionname);
     section.innerHTML = footercontentretrieve();
 
 }
