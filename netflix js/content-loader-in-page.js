@@ -67,7 +67,7 @@ populatecontainonpage("https://api.themoviedb.org/3/discover/movie","&with_genre
 
 
 //Below array is container for saving further movie/tv section API & parameters
-let arrayofremainingcontent = [
+const arrayofremainingcontent = [
     {"API":"https://api.themoviedb.org/3/discover/movie",
     "Additional_Params":"&with_genres=878",
     "Portion":"Mainsectionsciencefictionmovies",
@@ -125,9 +125,9 @@ let arrayofremainingcontent = [
 
 let run = false;
 let track = 0;
-let showcasewindow = document.getElementById("showcasevideo");
+const showcasewindow = document.getElementById("showcasevideo");
 window.addEventListener("scroll", function(){
-    let mainsection = this.document.getElementById("maincontentsection");
+    const mainsection = this.document.getElementById("maincontentsection");
     if(window.pageYOffset > mainsection.offsetHeight - 200 && 
         (showcasewindow.style.display === "" || showcasewindow.style.display === "none") && run === false){
             if(track < arrayofremainingcontent.length){
